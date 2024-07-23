@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .body {
     margin: 0;
     padding: 0;
@@ -44,9 +50,63 @@
 .row {
     display: flex;
     align-items: center;
+    width: 450px;
     justify-content: space-between;
-    background: #002578;
+    background: #c5c5c5;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #1e59e3;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    width: 120px;
+    list-style: none;
+    font-size: 17px;
+    padding: 18px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(icn/check-box-empty.png);
+    background-size: cover;
+    background-position: left;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #1e59e3;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(icn/check.png);
 }
